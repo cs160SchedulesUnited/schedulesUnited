@@ -20,7 +20,7 @@ jobs:
           dotnet-version: 3.1
         # publishes Blazor project to the release-folder
       - name: Publish .NET Core Project
-        run: dotnet publish schedulesUnited.csproj -c Release -o release --nologo
+        run: dotnet publish schedulesnited.csproj -c Release -o release --nologo
         # changes the base-tag in index.html from '/' to 'BlazorGitHubPagesDemo' to match GitHub Pages repository subdirectory
       - name: Change base-tag in index.html from / to schedulesUnited
         run: sed -i 's/<base href="\/" \/>/<base href="\/schedulesUnited\/" \/>/g' release/wwwroot/index.html
